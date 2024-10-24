@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/q34.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    flex-direction: row;
+}
+
+.alter-config{
+    margin: 30px 20px;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+#opt1{
+    width: 150px;
+    height: 70px;
+    border-radius: 90%;
+    left: -40px;
+    top: 90px;
+}
+
+#opt2{
+    width: 100px;
+    height:75px;
+    border-radius: 50%;
+    left: 200px;
+    top: 110px;
+}
+
+#opt3{
+    width: 110px;
+    height: 90px;
+    border-radius: 50%;
+    left: 400px;
+    top: 150px;
+}
+
+#opt4{
+    width: 115px;
+    height: 85px;
+    border-radius: 50%;
+    left: -80px;
+    top: 220px;
+}
+
+#opt5{
+    width: 110px;
+    height: 115px;
+    border-radius: 50%;
+    left: 40px;
+    top: 300px;
+}
+
+#opt6{
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    left: 260px;
+    top: 300px;
+}
+
+#opt7{
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    left: 450px;
+    top: 300px;
+}
+
+#opt8{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -12px;
+    right: 246px;
+}
+
+#opt8:hover{
+    width: 20px;
+    height: 20px;
+    top: -19px;
+    right: 240px;
+}
+
+.container{
+    transform: translate(150px);
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="frame">
+    
+        <div class="container">
+            <input type="button" id="opt1" class="alter-config" onclick="fail()">
+            <input type="button" id="opt2" class="alter-config" onclick="fail()">
+            <input type="button" id="opt3" class="alter-config" onclick="fail()">
+            <input type="button" id="opt4" class="alter-config" onclick="fail()">
+            <input type="button" id="opt5" class="alter-config" onclick="fail()">
+            <input type="button" id="opt6" class="alter-config" onclick="fail()">
+            <input type="button" id="opt7" class="alter-config" onclick="fail()">
+            <input type="button" id="opt8" class="alter-config" onclick="proxima()">
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function proxima(){
+            window.location.href = '../q35/q35.html'
+        }
+        function fail(){
+            window.location.href = '../fail/fail.html'
+        }
+
+    </script>
+</body>
+</html>

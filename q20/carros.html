@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/carro.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+    </style>
+</head>
+<body onload="load()">
+    
+    <div id="frame">
+
+    </div>
+
+    <script>
+    function load() {
+        setTimeout(function() {
+            window.location.href = 'q20.html'; 
+        }, 2000); 
+}
+
+    </script>
+</body>
+</html>

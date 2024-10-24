@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+    flex-direction: column;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/q35.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+.alter-config{
+    width: 288px;
+    height: 221px;
+    margin: 30px 20px;
+    border: none;
+    border-radius: 50%;
+    position: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transform: translate(160px, 60px);
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 220px;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    transform: translate(50px);
+}
+
+.opt-config{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#opt1{
+    background-image: url(imagens/botao-vermelho.png);
+}
+
+#mais-sorte{
+    width: 768px;
+    height: 82px;
+    position: fixed;
+    bottom: 60px;
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="frame">
+        <div class="container">
+            <input type="button" id="opt1" class="alter-config opt-config" onclick="fail()">
+        </div>
+
+    </div>
+    <img src="imagens/mais-sorte.png" id="mais-sorte">
+
+    <script>
+        function proxima(){
+            window.location.href = '../q36/q36.html'
+        }
+        function fail(){
+            window.location.href = '../fail/fail.html'
+        }
+
+
+        function alterarEstiloDoBotao() {
+    let opt1 = document.getElementById('opt1')
+    let maisSorte = document.getElementById('mais-sorte')
+
+    setTimeout(() => {
+        opt1.style.backgroundImage = 'none'
+        opt1.style.backgroundColor = 'green'
+        opt1.addEventListener('click', handleGreenButtonClick)
+
+        setTimeout(() => {
+            opt1.style.backgroundImage = 'url("imagens/botao-vermelho.png")'
+            opt1.style.backgroundColor = 'white'
+            opt1.removeEventListener('click', handleGreenButtonClick)
+        }, 1000)
+
+    }, 2000)
+
+    setTimeout(() => {
+        maisSorte.style.display = 'flex'
+    }, 3000)
+}
+
+function handleGreenButtonClick() {
+    proxima()
+}
+
+function iniciarJogo() {
+    alterarEstiloDoBotao()
+}
+
+document.addEventListener('DOMContentLoaded', iniciarJogo)
+
+    </script>
+</body>
+</html>

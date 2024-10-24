@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/q31-2.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+.alter-config{
+    width: 50px;
+    height: 50px;
+    margin: 30px 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 220px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    transform: translate(110px);
+}
+
+#opt1{
+    background-color: blue;
+}
+
+#opt1:hover{
+    background-color: #000066;
+}
+
+#opt2{
+    background-color: red;
+}
+
+#opt2:hover{
+    background-color: #990000;
+}
+
+#opt3{
+    background-color: rgb(152, 253, 0);
+}
+
+#opt3:hover{
+    background-color: #006600;
+}
+
+#opt4{
+    background-color: #ce30ff;
+}
+
+#opt4:hover{
+    background-color: #a500d5;
+}
+
+.seq-config{
+    width: 35px;
+    height: 120px;
+    transform: translate(-270px, 320px);
+    display: none;
+}
+
+    </style>
+</head>
+<body onload="sequencia()">
+    
+    <div id="frame">
+        <div class="container">
+            <input type="button" id="opt1" class="alter-config" onclick="fail()">
+        </div>
+
+        <div class="container">
+            <input type="button" id="opt2" class="alter-config" onclick="fail()">
+        </div>
+        
+        <div class="container">
+            <input type="button" id="opt3" class="alter-config" onclick="fail()">
+        </div>
+
+        <div class="container">
+            <input type="button" id="opt4" class="alter-config" onclick="proxima()">
+        </div>
+      
+        <img src="imagens/seq1.png" id="seq1" class="seq-config">
+        <img src="imagens/seq2.png" id="seq2" class="seq-config">
+        <img src="imagens/seq3.png" id="seq3" class="seq-config">
+        <img src="imagens/seq4.png" id="seq4" class="seq-config">
+        <img src="imagens/seq5.png" id="seq5" class="seq-config">
+        <img src="imagens/seq6.png" id="seq6" class="seq-config">
+        <img src="imagens/seq7.png" id="seq7" class="seq-config">
+        <img src="imagens/seq8.png" id="seq8" class="seq-config">
+
+
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

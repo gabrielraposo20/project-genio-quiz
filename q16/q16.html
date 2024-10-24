@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+    flex-direction: row;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/q16.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+.alter-config{
+    width: 300px;
+    height: 90px;
+    margin: 30px 20px;
+    border: 10px solid #993300;
+    border-radius: 5px;
+    background-color: #996600;
+    font-size: 2.8em;
+    font-weight: bolder;
+    position: center;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 220px;
+}
+
+.alter-config:hover{
+    background-color: #99ff00;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    transform: translate(50px);
+}
+
+.opt-config{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#opt1{
+    background-image: url(imagens/opt1.png);
+}
+
+#opt2{
+    background-image: url(imagens/opt2.png);
+}
+
+#opt3{
+    background-image: url(imagens/opt3.png);
+}
+
+#opt4{
+    background-image: url(imagens/opt4.png);
+}
+
+#secreto{
+    background-image: url(imagens/secreto1.png);
+    width: 131px;
+    height: 73px;
+    transform: translate(-510px, 65px);
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#secreto:hover{
+    background-image: url(imagens/secreto2.png);
+    width: 161px;
+    height: 68px;
+}
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="frame">
+        <div class="container">
+            <input type="button" id="opt1" class="alter-config opt-config" onclick="fail()">
+            <input type="button" id="opt3" class="alter-config opt-config" onclick="fail()">
+        </div>
+        
+        <div class="container">
+            <input type="button" id="opt2" class="alter-config opt-config" onclick="fail()">
+            <input type="button" id="opt4" class="alter-config opt-config" onclick="fail()">
+        </div>
+    </div>
+
+    <input type="button" id="secreto" class="opt-config" onclick="proxima()">
+
+
+    <script>
+        function proxima(){
+            window.location.href = '../q17/q17.html'
+        }
+        function fail(){
+            window.location.href = '../fail/fail.html'
+        }
+
+    </script>
+</body>
+</html>

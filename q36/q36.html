@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/q36.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.alter-config{
+    width: 220px;
+    height: 70px;
+    margin: 30px 20px;
+    border: 6px solid #993300;
+    border-radius: 5px;
+    background-color: #996600;
+    position: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 20px;
+}
+
+.alter-config:hover{
+    background-color: #99ff00;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    transform: translate(50px);
+}
+
+.opt-config{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#opt1{
+    background-image: url(imagens/opt1.png);
+}
+
+#topo{
+    flex-direction: column;
+    width: 810px;
+    height: 89px;
+}
+
+#continuar, #recomecar{
+    position: fixed;
+    bottom: 2px;
+    display: none;
+}
+
+#continuar{
+    background-image: url(imagens/continuar.png);
+}
+
+#recomecar{
+    background-image: url(imagens/recomecar.png);
+}
+
+.img-config{
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body onload="load()">
+    
+    <div id="frame">
+        <img src="imagens/escolha-certo.png" id="topo">
+        
+        <div class="container">
+            <img src="imagens/p1.png" id="p" class="img-config">
+    
+            <img src="imagens/a1.png" id="a" class="img-config">
+       
+            <img src="imagens/v1.png" id="v" class="img-config">
+        </div>
+      
+    </div>
+
+    <input type="button" id="continuar" class="opt-config alter-config" onclick="proxima()">
+    <input type="button" id="recomecar" class="opt-config alter-config" onclick="fail()">
+    <script>
+        function proxima(){
+            window.location.href = '../q37/q37.html'
+        }
+        function fail(){
+            window.location.href = '../fail/fail.html'
+        }
+
+        function load() {
+            let topo = document.getElementById('topo');
+            let p = document.getElementById('p');
+            let a = document.getElementById('a');
+            let v = document.getElementById('v');
+            let continuar = document.getElementById('continuar');
+            let recomecar = document.getElementById('recomecar');
+
+            p.addEventListener('click', pfunction);
+            a.addEventListener('click', afunction);
+            v.addEventListener('click', vfunction);
+
+            function pfunction() {
+                p.removeEventListener('click', pfunction);
+                a.removeEventListener('click', afunction);
+                v.removeEventListener('click', vfunction);
+
+                p.style.cursor = 'default'
+                a.style.cursor = 'default'
+                v.style.cursor = 'default'
+
+
+                p.src = 'imagens/p2.png';
+                a.style.display = 'none';
+                v.style.display = 'none';
+
+                continuar.style.display = 'flex';
+                topo.src = 'imagens/matou-certo.png';
+            }
+
+            function afunction() {
+                p.removeEventListener('click', pfunction);
+                a.removeEventListener('click', afunction);
+                v.removeEventListener('click', vfunction);
+
+                p.style.cursor = 'default'
+                a.style.cursor = 'default'
+                v.style.cursor = 'default'
+
+                p.style.opacity = '0';
+                a.src = 'imagens/a2.png';
+                v.style.opacity = '0';
+
+                recomecar.style.display = 'flex';
+                topo.src = 'imagens/matou-errado.png';
+            }
+
+            function vfunction() {
+                p.removeEventListener('click', pfunction);
+                a.removeEventListener('click', afunction);
+                v.removeEventListener('click', vfunction);
+
+                p.style.cursor = 'default'
+                a.style.cursor = 'default'
+                v.style.cursor = 'default'
+
+                p.style.opacity = '0';
+                a.style.opacity = '0';
+                v.src = 'imagens/v2.png';
+
+                recomecar.style.display = 'flex';
+                topo.src = 'imagens/matou-errado.png';
+            }
+        }
+    </script>
+</body>
+</html>

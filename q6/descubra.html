@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/descubra.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+.alter-config{
+    width: 300px;
+    height: 90px;
+    margin: 30px 20px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-size: contain;
+    background-color: #00ff33;
+    font-size: 2.8em;
+    font-weight: bolder;
+    position: center;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 220px;
+}
+
+.alter-config:hover{
+    background-color: #33ff99;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    transform: translate(400px, 200px);
+}
+
+.opt-config{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#opt1{
+    background-image: url(imagens/continuar.png);
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="frame">
+        <div class="container">
+            <input type="button" id="opt1" class="alter-config opt-config" onclick="proxima()">
+        </div>
+      
+    </div>
+
+
+    <script>
+        function proxima(){
+            window.location.href = 'q6.html'
+        }
+    </script>
+</body>
+</html>

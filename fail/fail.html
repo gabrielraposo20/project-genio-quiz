@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genio Quiz 1</title>
+    <style>
+        body,html{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    display: flex;
+    margin: auto;
+    background-color: black;
+}
+
+#frame{
+    margin-top: 50px;
+    background-image: url(imagens/fail-background.png);
+    min-height: 580px;
+    min-width: 817px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.alter-config{
+    width: 450px;
+    height: 180px;
+    margin: 30px 20px;
+    border: 10px solid white;
+    border-radius: 5px;
+    background-color: #996666;
+    font-size: 2.8em;
+    font-weight: bolder;
+    position: center;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+}
+
+.alter-config:nth-of-type(1){
+    margin-top: 400px;
+    transform: translate(300px, -20px);
+}
+
+.alter-config:hover{
+    background-color: red;
+    border-color: rgb(252, 252, 252);
+}
+
+.opt-config{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#recomecar{
+    background-image: url(imagens/recomecar.png);
+}
+    </style>
+</head>
+<body>
+  
+<div id="frame">
+    <input type="button" class="alter-config opt-config" onclick="proxima()" id="recomecar">
+</div>
+
+
+
+
+<script>
+    function proxima(){
+        window.location.href = '../main/main.html'
+    }
+</script>
+</body>
+</html>
